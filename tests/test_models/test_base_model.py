@@ -9,14 +9,9 @@ import uuid
 from datetime import datetime
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
     """TASK 1 UNIT TESTS"""
-    def setUp(self):
-        """el metodo setup se usar
-        """
-    self.test_model1 = BaseModel()
-    self.test_model2 = BaseModel()
-    
     def test_bas_mod_id(self):
         bm1 = BaseModel()
         self.assertIsInstance(bm1.id, str)
