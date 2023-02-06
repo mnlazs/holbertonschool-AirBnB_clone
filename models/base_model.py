@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import uuid
 import models
+import uuid
 from datetime import datetime
 
 """
