@@ -51,3 +51,23 @@ class TestBaseModel(unittest.TestCase):
     def test_str_met(self):
         bm1 = BaseModel()
         self.assertIn(bm1.id, str(bm1))
+
+class TestBaseModel2(unittest.TestCase):
+    "TASK 2 UNIT TESTS"
+    def test_init_with_kwargs(self):
+        created_at = '2023-04-20T00:00:00.000000'
+        updated_at = '2023-04-20T00:00:00.000000'
+        richard1 = {
+            'id': 'villager',
+            'created_at': created_at,
+            'updated_at': updated_at,
+            'name': 'uwu'
+        }
+        bm1 = BaseModel(**richard1)
+        self.assertEqual(bm1.id, 'villager')
+        self.assertEqual(bm1.created_at, datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%S.%f'))
+        self.assertEqual(bm1.updated_at, datetime.strptime(updated_at, '%Y-%m-%dT%H:%M:%S.%f'))
+        self.assertEqual(bm1.name, 'uwu')
+
+if __name__ == "__main__":
+    unittest.main()
