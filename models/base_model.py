@@ -41,3 +41,18 @@ class BaseModel:
         obj_dict['created_at'] = self.created_at.isoformat()
         obj_dict['updated_at'] = self.updated_at.isoformat()
         return obj_dict
+
+def to_json(self):
+        '''Este es el metodo json.
+        Este funtion o metodo retorna el dicionario con\
+        todas sus varibles y pares\
+        '''
+        my_dict = self.__dict__
+        new_dict = {}
+        for i in my_dict.keys():
+            if (isinstance(my_dict[i], datetime)):
+                new_dict[i] = str(my_dict[i])
+            else:
+                new_dict[i] = my_dict[i]
+        new_dict['__class__'] = self.__class__.__name__
+        return new_dict
