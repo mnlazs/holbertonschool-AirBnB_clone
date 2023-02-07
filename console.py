@@ -88,7 +88,7 @@ l_classes = ['BaseModel', 'User', 'Amenity',
                     return
             print("** no instance found **")
 
-    def do_boom(self, arg):
+    def do_destroy(self, arg):
         """ deletes an instance passed """
 
         if not arg:
@@ -168,7 +168,7 @@ l_classes = ['BaseModel', 'User', 'Amenity',
                     return
             print("** no instance found **")
 
-    def do_chao(self, line):
+    def do_quit(self, line):
         """ Quit command to exit the command interpreter """
         return True
 
