@@ -10,6 +10,7 @@ from models.amenity import Amenity
 from models.state import State
 from models.review import Review
 import json
+import shlex
 
 
 class HBNBCommand(cmd.Cmd):
