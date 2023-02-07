@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from models import storage
 from models.base_model import BaseModel
 '''
 This is the 'amenity' module.
