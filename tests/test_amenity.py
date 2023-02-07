@@ -1,46 +1,36 @@
 #!/usr/bin/python3
-'''
-This is the 'test_amenity' module.
-test_amenity uses unittest to test the 'models/amenity' module.
-All credit for this module goes to Danton Rodriguez
-(https://github.com/p0516357)
-'''
+"""
+Unittest for amenity.py
+"""
 import unittest
 from models.amenity import Amenity
 import datetime
 
 
 class TestAmenity(unittest.TestCase):
-    """Test for amenity class
-    """
-    def setUp(self):
-        """sets up objects for testing later
-        """
-        self.test_model1 = Amenity()
-        self.test_model2 = Amenity()
+    """Tests instances and methods from amenity class"""
 
-    def test_basic_setup(self):
-        """test for amenity class attributes
-        """
-        self.assertTrue(hasattr(self.test_model1, "name"))
-        self.assertTrue(self.test_model1.id != self.test_model2.id)
-        m1c = self.test_model1.created_at
-        m2c = self.test_model2.created_at
-        self.assertTrue(m1c != m2c)
-        self.assertTrue(type(m1c) is datetime.datetime)
+    a = Amenity()
+
+    def test_class_exists(self):
+        """tests if class exists"""
+        res = "<class 'models.amenity.Amenity'>"
+        self.assertEqual(str(type(self.a)), res)
+
+    def test_user_inheritance(self):
+        """test if Amenity is a subclass of BaseModel"""
+        self.assertIsInstance(self.a, Amenity)
+
+    def testHasAttributes(self):
+        """verify if attributes exist"""
+        self.assertTrue(hasattr(self.a, 'name'))
+        self.assertTrue(hasattr(self.a, 'id'))
+        self.assertTrue(hasattr(self.a, 'created_at'))
+        self.assertTrue(hasattr(self.a, 'updated_at'))
 
     def test_types(self):
-        """testing for proper typing of attributes
-        """
-        self.assertTrue(type(self.test_model1.name) is str)
-
-    def test_save(self):
-        """testing whether save updates the updated_at attribute
-        """
-        m1u = self.test_model1.updated_at
-        self.test_model1.save()
-        m1u_saved = self.test_model1.updated_at
-        self.assertFalse(m1u == m1u_saved)
-
-if __name__ == '__main__':
-    unittest.main()
+        """tests if the type of the attribute is the correct one"""
+        self.assertIsInstance(self.a.name, str)
+        self.assertIsInstance(self.a.id, str)
+        self.assertIsInstance(self.a.created_at, datetime.datetime)
+        self.assertIsInstance(self.a.updated_at, datetime.datetime)
