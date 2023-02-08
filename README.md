@@ -4,7 +4,7 @@
 
 The AirBnB console is a command line interface that allows users to interact with the JSON file-based data storage system for the AirBnB project. It uses the Python module 'cmd' to create the interface and provides a custom prompt of '(hbnb)'. The console implements the ability to quit the program using 'quit' or 'EOF' and provides a 'help' command to display information on available commands.
 
-## How to start the console:..
+## How to start the console:
 
 Clone the repository and run the console.py
 ```
