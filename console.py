@@ -19,8 +19,6 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 class HBNBCommand(cmd.Cmd):
     """ HBNH console """
-
-
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
@@ -161,6 +159,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
         else:
             print("** class doesn't exist **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
