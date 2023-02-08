@@ -88,7 +88,7 @@ class HBNBCommand(cmd.Cmd):
                     return
             print("** no instance found **")
 
-    def do_destroy(self, arg):
+    def do_boom(self, arg):
         """ Deletes an instance passed """
 
         if not arg:
@@ -166,7 +166,7 @@ class HBNBCommand(cmd.Cmd):
                     return
             print("** no instance found **")
 
-    def do_quit(self, line):
+    def do_chao(self, line):
         """ Quit command to exit the command interpreter """
         return True
 
