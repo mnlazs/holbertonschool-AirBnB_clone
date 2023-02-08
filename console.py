@@ -47,9 +47,11 @@ class HBNBCommand(cmd.Cmd):
                     try:
                         value = int(value)
                     except:
+                    """ code to handle an exception """
                         try:
                             value = float(value)
                         except:
+                        """ code to handle an exception """
                             continue
                 new_dict[key] = value
         return new_dict
@@ -141,11 +143,13 @@ class HBNBCommand(cmd.Cmd):
                                     try:
                                         args[3] = int(args[3])
                                     except:
+                                    """ code to handle an exception """
                                         args[3] = 0
                                 elif args[2] in floats:
                                     try:
                                         args[3] = float(args[3])
                                     except:
+                                    """ code to handle an exception """
                                         args[3] = 0.0
                             setattr(models.storage.all()[k], args[2], args[3])
                             models.storage.all()[k].save()
