@@ -1,3 +1,4 @@
+
 footer {
     position: fixed;
     background: #00FF00;
@@ -5,6 +6,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
 footer p {
     position: absolute;
     text-align: center;
