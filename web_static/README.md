@@ -5,8 +5,9 @@
 The web_static file contains a number of html files, which will determine the conceptual structure of the project. It also contains a folder of images, which are stored locally, and also the CSS folder where the aesthetic proposal of the project will be determined.
 
 ## folder:
-
-web_static/0-index.html
+<ol>
+<li>web_static/0-index.html</li>
+</ol>
 web_static/1-index.html
 web_static/2-index.html
 web_static/3-index.html
