@@ -2,14 +2,14 @@
     position: relative;
     background: white;
     height: 70px;
-    width: 70%;
+    width: 1000%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
 }
 button {
     position: absolute;
     font-size: 18px;
-    background: #a2ff5a;
+    background: #FF5A5F;
     color: #FFFFFF;
     height: 48px;
     width: 20%;
